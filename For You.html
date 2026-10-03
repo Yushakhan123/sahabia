@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>here you go 💗</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,500&family=Quicksand:wght@400;600&display=swap">
+<style>
+:root{
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+  --bg:#fff5f7; --card:#ffffff; --ink:#4a2c3a; --soft:#9a6b7e; --accent:#e8567f; --tint:#ffe3ea;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){--bg:#241520;--card:#33202c;--ink:#fde8ef;--soft:#d3a1b5;--accent:#ff7da0;--tint:#46283a;}
+}
+:root[data-theme="dark"]{--bg:#241520;--card:#33202c;--ink:#fde8ef;--soft:#d3a1b5;--accent:#ff7da0;--tint:#46283a;}
+html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:'Quicksand',system-ui,sans-serif;line-height:1.6;overflow-x:hidden}
+h1,h2{font-family:'Playfair Display',Georgia,serif;font-weight:600;margin:0}
+section{max-width:760px;margin:0 auto;padding:56px 22px;text-align:center}
+.hero{min-height:88vh;display:flex;flex-direction:column;justify-content:center;align-items:center}
+.hero h1{font-size:clamp(2.4rem,9vw,4.2rem);color:var(--accent);font-style:italic}
+.hero p{color:var(--soft);font-size:1.1rem;max-width:420px}
+.btn{margin-top:22px;background:var(--accent);color:#fff;border:0;border-radius:999px;padding:13px 28px;font:600 1rem 'Quicksand',sans-serif;cursor:pointer;box-shadow:0 6px 18px rgba(232,86,127,.35)}
+.btn:active{transform:scale(.97)}
+h2{font-size:1.9rem;margin-bottom:22px}
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px}
+.photo{aspect-ratio:3/4;background:var(--tint);border-radius:18px;display:flex;flex-direction:column;align-items:center;justify-content:center;color:var(--soft);padding:12px;box-shadow:0 8px 22px rgba(0,0,0,.08)}
+.photo span{font-size:2rem}
+.photo small{margin-top:6px;font-style:italic}
+.note{background:var(--card);border-radius:20px;padding:28px 22px;box-shadow:0 8px 24px rgba(0,0,0,.08);min-height:130px;display:flex;align-items:center;justify-content:center;font-size:1.15rem}
+.reasons{list-style:none;padding:0;margin:0;display:grid;gap:12px;text-align:left}
+.reasons li{background:var(--card);border-left:4px solid var(--accent);border-radius:12px;padding:14px 18px;box-shadow:0 4px 14px rgba(0,0,0,.06)}
+.final{font-family:'Playfair Display',Georgia,serif;font-size:1.5rem;font-style:italic;color:var(--accent)}
+
+.envs{display:grid;gap:12px}
+.env{background:var(--card);border-radius:16px;padding:16px 18px;box-shadow:0 4px 14px rgba(0,0,0,.06);cursor:pointer;text-align:left;border:0;font:inherit;color:inherit;width:100%}
+.env b{color:var(--accent)}
+.env .msg{display:none;margin-top:10px;color:var(--soft)}
+.env.open .msg{display:block}
+.chips{display:flex;flex-wrap:wrap;gap:10px;justify-content:center}
+.chips span{background:var(--tint);border-radius:999px;padding:10px 18px}
+.meter{height:18px;background:var(--tint);border-radius:999px;overflow:hidden;margin:18px 0 6px}
+.meter div{height:100%;width:8%;background:var(--accent);border-radius:999px;transition:width .6s}
+.heart{position:fixed;bottom:-30px;pointer-events:none;animation:rise 7s linear forwards;z-index:5}
+@keyframes rise{to{transform:translateY(-110vh);opacity:0}}
+</style>
+</head>
+<body>
+
+<section class="hero">
+  <h1 id="name">My Love</h1>
+  <p>I made this little corner of the internet just for you.</p>
+  <button class="btn" onclick="document.getElementById('notes').scrollIntoView();burst()">Open your surprise 💌</button>
+</section>
+
+<section id="notes">
+  <h2>Little notes for you</h2>
+  <div class="note" id="note">Tap the button for a note from my heart 💗</div>
+  <button class="btn" onclick="nextNote()">TAP ME GNG!</button>
+</section>
+
+<section>
+  <h2>Open when...</h2>
+  <div class="envs">
+    <button class="env" onclick="this.classList.toggle('open')">💌 <b>Open when you miss me</b><div class="msg">Close your eyes and picture me hugging you. I'm thinking about you right now, I promise😙.</div></button>
+    <button class="env" onclick="this.classList.toggle('open')">💌 <b>Open when you're sad</b><div class="msg">This will pass, and I'm right here. You're stronger than you know, and you're never alone.</div></button>
+    <button class="env" onclick="this.classList.toggle('open')">💌 <b>Open when you can't sleep</b><div class="msg">Breathe slowly. Think of something that makes you smile. Sweet dreams, Jaan.</div></button>
+    <button class="env" onclick="this.classList.toggle('open')">💌 <b>Open when you doubt yourself</b><div class="msg">You are beautiful, smart, and so loved. I see it every day, even when you don't.</div></button>
+  </div>
+</section>
+
+<section>
+  <h2>Things I can't wait to do with you</h2>
+  <div class="chips">
+    <span>🌅 Watch a sunset together</span><span>🍕 Late-night food dates</span><span>✈️ Travel somewhere new</span><span>🎬 Movie nights</span><span>🌧️ Walk in the rain</span><span>📸 Make lots of memories (obv)</span>
+  </div>
+</section>
+
+<section>
+  <h2>My promises to you</h2>
+  <ul class="reasons">
+    <li>I'll always listen to you.</li>
+    <li>I'll be honest, even when it's hard.</li>
+    <li>I'll cheer for your dreams, loudly.</li>
+    <li>I'll keep choosing you.</li>
+  </ul>
+</section>
+
+<section>
+  <h2>How much do I love you?</h2>
+  <div class="meter"><div id="bar"></div></div>
+  <button class="btn" onclick="grow()">Tap to find out 😝</button>
+  <p id="gtxt" style="color:var(--soft)"></p>
+</section>
+
+<section>
+  <h2>Reasons I love you</h2>
+  <ul class="reasons">
+    <li>Your smile makes my whole day better hehehe</li>
+    <li>You make ordinary moments feel special.</li>
+    <li>You're kind, well hn attack krti ho achanak😭, even when no one is watching.</li>
+    <li>With you, I feel completely at home.</li>
+  </ul>
+</section>
+
+<section>
+  <p class="final">Thank you for being you. I love you, today and always.</p>
+  <button class="btn" onclick="burst()">ek aur masti button 😋💕</button>
+</section>
+
+<script>
+const notes=[
+  "You're my favorite person to talk to about everything and nothing.",
+  "Every day with you feels like a gift I didn't know I could have.",
+  "I still get butterflies when I see your name on my phone.",
+  "You make me want to be the best version of myself.",
+  "Thank you for choosing me, every single day.",
+  "Wherever we are, as long as I'm with you, it's the perfect place."
+];
+let i=-1;
+function nextNote(){
+  i=(i+1)%notes.length;
+  document.getElementById('note').textContent=notes[i];
+}
+let lv=8;
+function grow(){
+  lv=Math.min(lv+23,100);
+  document.getElementById('bar').style.width=lv+'%';
+  document.getElementById('gtxt').textContent=lv>=100?"Oho itna sara that it can't be measured 😝💖":"Keep tapping...";
+  if(lv>=100)burst();
+}
+function burst(){
+  const e=['💗','💕','💖','🌸','✨'];
+  for(let k=0;k<18;k++){
+    const h=document.createElement('div');
+    h.className='heart';
+    h.textContent=e[Math.floor(Math.random()*e.length)];
+    h.style.left=Math.random()*95+'vw';
+    h.style.fontSize=(16+Math.random()*22)+'px';
+    h.style.animationDelay=(Math.random()*1.5)+'s';
+    document.body.appendChild(h);
+    setTimeout(()=>h.remove(),9000);
+  }
+}
+</script>
+</body>
+</html>
